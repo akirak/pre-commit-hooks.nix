@@ -43,6 +43,11 @@ in
           entry = "${tools.brittany}/bin/brittany --write-mode=inplace";
           files = "\\.l?hs$";
         };
+      flake8 = {
+        description = "A python tool that glues together pep8, pyflakes, mccabe, and third-party plugins";
+        entry = "${pkgs.python3Packages.flake8}/bin/flake8";
+        files = "\\.py$";
+      };
       hlint =
         {
           name = "hlint";
